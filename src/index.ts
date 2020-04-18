@@ -6,7 +6,7 @@ const getOpts = (args: Hexo.extend.Deployer.Config): DeployOption | null => {
   const password = args.password || process.env.CLODUI_PASSWORD;
   const websiteId = args.website_id || process.env.CLODUI_WEBSITE;
   const sourceDir = hexo.public_dir;
-  const publish = args.publish ? args.publish === "true" : false;
+  const publish = args.publish ?? false;
 
   if (username && password && websiteId && sourceDir) {
     return {
