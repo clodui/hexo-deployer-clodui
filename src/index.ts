@@ -4,7 +4,7 @@ import Hexo from "hexo";
 const getOpts = (args: Hexo.extend.Deployer.Config): DeployOption | null => {
   const username = args.username || process.env.CLODUI_USERNAME;
   const password = args.password || process.env.CLODUI_PASSWORD;
-  const websiteId = args.website_id;
+  const websiteId = args.website_id || process.env.CLODUI_WEBSITE;
   const sourceDir = hexo.public_dir;
   const publish = args.publish ? args.publish === "true" : false;
 
@@ -30,7 +30,7 @@ hexo.extend.deployer.register("clodui", async (args) => {
         type: clodui
         username: <Clodui username> # or set environment variable CLODUI_USERNAME
         password: <Clodui password> # or set environment variable CLODUI_PASSWORD
-        website_id: <CLodui website id>
+        website_id: <Clodui website id> # or set environment variable CLODUI_WEBSITE
         publish: [true|false] # default is false`;
 
     console.log(help);

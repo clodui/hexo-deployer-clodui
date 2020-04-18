@@ -17,7 +17,7 @@ deploy:
   type: clodui
   username: <Clodui username> # or set environment variable CLODUI_USERNAME
   password: <Clodui password> # or set environment variable CLODUI_PASSWORD
-  website_id: <Website id>
+  website_id: <Clodui website id> # or set environment variable CLODUI_WEBSITE
   publish: [true|false] # default is false`
 ```
 
