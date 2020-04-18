@@ -20,3 +20,5 @@ deploy:
   website_id: <Website id>
   publish: [true|false] # default is false`
 ```
+
+Check out [Clodui docs](https://www.clodui.com/docs/) for more details.
